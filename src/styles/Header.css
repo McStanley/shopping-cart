@@ -1,0 +1,24 @@
+.Header {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: white;
+}
+
+.Header-title {
+  padding: 0 40px;
+  display: grid;
+  place-items: center;
+  border-right: 1px solid white;
+  height: 100%;
+  font-size: 2rem;
+}
+
+.Header-nav {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 50px;
+}

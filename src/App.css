@@ -1,3 +1,10 @@
 .App {
   min-height: 100vh;
+  background: rgb(16, 16, 16) url('./assets/background.jpg') top left / cover
+    no-repeat;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

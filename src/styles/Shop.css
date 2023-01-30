@@ -1,0 +1,14 @@
+.Shop {
+  margin: 40px 0;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.Shop--loading {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}

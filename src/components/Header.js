@@ -1,10 +1,10 @@
 import '../styles/Header.css';
 import { NavLink } from 'react-router-dom';
 
-function Header() {
+function Header({ isHome }) {
   return (
-    <div className="Header">
-      <div className="Header-title">
+    <div className={`Header ${isHome && 'home'}`}>
+      <div className={`Header-title ${isHome && 'home'}`}>
         <NavLink to="/">Jewelry Heaven</NavLink>
       </div>
       <nav className="Header-nav">

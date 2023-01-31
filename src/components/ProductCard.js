@@ -14,6 +14,12 @@ function ProductCard({ product, addToCart }) {
     setQuantity((prevQuantity) => prevQuantity - 1);
   };
 
+  const handleAddToCart = () => {
+    addToCart(id, quantity);
+    setQuantity(1);
+    alert('Product added to cart');
+  };
+
   const { id, title, description, image, price, rating } = product;
 
   return (
@@ -39,10 +45,7 @@ function ProductCard({ product, addToCart }) {
         <button className="ProductCard-button" onClick={decrementQuantity}>
           -
         </button>
-        <button
-          className="ProductCard-button wide"
-          onClick={() => addToCart(id, quantity)}
-        >
+        <button className="ProductCard-button wide" onClick={handleAddToCart}>
           Add to cart {quantity > 1 && `(${quantity})`}
         </button>
       </div>

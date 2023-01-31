@@ -1,7 +1,7 @@
 import '../styles/ProductCard.css';
 import { useState } from 'react';
 
-function ProductCard({ product }) {
+function ProductCard({ product, addToCart }) {
   const [quantity, setQuantity] = useState(1);
 
   const incrementQuantity = () => {
@@ -39,7 +39,10 @@ function ProductCard({ product }) {
         <button className="ProductCard-button" onClick={decrementQuantity}>
           -
         </button>
-        <button className="ProductCard-button wide">
+        <button
+          className="ProductCard-button wide"
+          onClick={() => addToCart(id, quantity)}
+        >
           Add to cart {quantity > 1 && `(${quantity})`}
         </button>
       </div>

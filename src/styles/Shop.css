@@ -12,3 +12,20 @@
   place-items: center;
   font-size: 2rem;
 }
+
+.Shop-cartButton {
+  position: fixed;
+  bottom: 80px;
+  right: 80px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: rgb(156, 209, 209);
+  display: grid;
+  place-items: center;
+  border: 2px solid grey;
+}
+
+.Shop-cartButton img {
+  height: 50%;
+}

@@ -26,16 +26,19 @@ function CartItem({ entry: { id, quantity }, product, editCart }) {
         </div>
         <div className="CartItem-actions">
           <div className="CartItem-quantity">
-            <p>Quantity:</p>
+            <label htmlFor="quantity">Quantity:</label>
             <input
+              id="quantity"
               type="number"
               value={quantity}
               onChange={(e) => handleChange(e)}
             />
           </div>
           <div className="CartItem-remove">
-            <p>Remove from cart:</p>
-            <button onClick={handleRemove}>X</button>
+            <label htmlFor="remove-button">Remove from cart:</label>
+            <button id="remove-button" onClick={handleRemove}>
+              X
+            </button>
           </div>
         </div>
       </div>

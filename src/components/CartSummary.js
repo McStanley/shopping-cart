@@ -3,7 +3,7 @@ import getCartTotal from '../utils/getCartTotal';
 
 function CartSummary({ cart, products, handleCheckout, handleContinue }) {
   return (
-    <div className="CartSummary">
+    <div className="CartSummary" data-testid="cart-summary">
       <p className="CartSummary-total">
         Your total is: ${getCartTotal(cart, products)}
       </p>

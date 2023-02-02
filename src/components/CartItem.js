@@ -11,7 +11,7 @@ function CartItem({ entry: { id, quantity }, product, editCart }) {
   };
 
   return (
-    <article className="CartItem">
+    <article className="CartItem" data-testid="cart-item">
       <div className="CartItem-imageContainer">
         <img
           className="CartItem-image"

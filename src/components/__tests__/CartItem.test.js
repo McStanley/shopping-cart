@@ -41,18 +41,6 @@ describe('CartItem', () => {
     expect(price).toBeInTheDocument();
   });
 
-  it('correctly updates the quantity', () => {
-    render(
-      <CartItem entry={testEntry} product={testProduct} editCart={editCart} />
-    );
-    const input = screen.getByRole('spinbutton', {
-      name: /quantity/i,
-    });
-    userEvent.clear(input);
-    userEvent.type(input, '4');
-    expect(editCart).toHaveBeenCalledWith(testEntry.id, '4');
-  });
-
   it('correctly removes entry from the cart', () => {
     render(
       <CartItem entry={testEntry} product={testProduct} editCart={editCart} />

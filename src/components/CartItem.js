@@ -2,8 +2,8 @@ import '../styles/CartItem.css';
 
 function CartItem({ entry: { id, quantity }, product, editCart }) {
   const handleChange = (e) => {
-    const newQuantity = e.target.value;
-    editCart(id, newQuantity);
+    if (e.target.value < 1) return;
+    editCart(id, e.target.value);
   };
 
   const handleRemove = () => {
@@ -33,7 +33,8 @@ function CartItem({ entry: { id, quantity }, product, editCart }) {
               id="quantity"
               type="number"
               value={quantity}
-              onChange={(e) => handleChange(e)}
+              onChange={handleChange}
+              onKeyDown={(e) => e.preventDefault()}
             />
           </div>
           <div className="CartItem-remove">

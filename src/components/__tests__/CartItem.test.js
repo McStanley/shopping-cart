@@ -36,7 +36,7 @@ describe('CartItem', () => {
       <CartItem entry={testEntry} product={testProduct} editCart={editCart} />
     );
     const price = screen.getByText(
-      `$${testEntry.quantity * testProduct.price}`
+      `$${(testEntry.quantity * testProduct.price).toFixed(2)}`
     );
     expect(price).toBeInTheDocument();
   });

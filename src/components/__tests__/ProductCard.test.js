@@ -39,17 +39,17 @@ describe('ProductCard', () => {
 
   it('renders a price', () => {
     render(<ProductCard product={testProduct} />);
-    const priceEl = screen.getByText('$' + testProduct.price);
+    const priceEl = screen.getByText('$' + testProduct.price.toFixed(2));
     expect(priceEl).toBeInTheDocument();
   });
 
   it('renders price details', () => {
     render(<ProductCard product={testProduct} />);
-    const priceEl = screen.getByText('$' + testProduct.price);
+    const priceEl = screen.getByText('$' + testProduct.price.toFixed(2));
     const incrementEl = screen.getByRole('button', { name: '+' });
     userEvent.click(incrementEl);
     userEvent.click(incrementEl);
-    expect(priceEl).toHaveTextContent(/\(\s*\$\s*123\s*×\s*3\s*\)/i);
+    expect(priceEl).toHaveTextContent(/\(\s*\$\s*123.00\s*×\s*3\s*\)/i);
   });
 
   it('renders an increment button', () => {

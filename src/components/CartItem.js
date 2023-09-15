@@ -10,6 +10,8 @@ function CartItem({ entry: { id, quantity }, product, editCart }) {
     editCart(id, 0);
   };
 
+  const totalItemPrice = product.price * quantity;
+
   return (
     <article className="CartItem" data-testid="cart-item">
       <div className="CartItem-imageContainer">
@@ -22,7 +24,7 @@ function CartItem({ entry: { id, quantity }, product, editCart }) {
       <div className="CartItem-right">
         <div className="CartItem-top">
           <p className="CartItem-title">{product.title}</p>
-          <p className="CartItem-price">${product.price * quantity}</p>
+          <p className="CartItem-price">${totalItemPrice.toFixed(2)}</p>
         </div>
         <div className="CartItem-actions">
           <div className="CartItem-quantity">

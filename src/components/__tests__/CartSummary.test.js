@@ -17,7 +17,9 @@ describe('CartSummary', () => {
   it('displays the correct total', () => {
     render(<CartSummary cart={testCart} products={testProducts} />);
     const total = 400;
-    expect(screen.getByText(`Your total is: $${total}`)).toBeInTheDocument();
+    expect(
+      screen.getByText(`Your total is: $${total.toFixed(2)}`)
+    ).toBeInTheDocument();
   });
 
   it('invokes handleCheckout properly', () => {

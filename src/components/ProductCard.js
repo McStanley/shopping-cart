@@ -31,10 +31,10 @@ function ProductCard({ product, addToCart }) {
       </div>
       <p className="ProductCard-description">{description}</p>
       <p className="ProductCard-price">
-        ${price * quantity}{' '}
+        ${(price * quantity).toFixed(2)}
         {quantity > 1 && (
           <span className="ProductCard-priceDetails">
-            (${price} × {quantity})
+            (${price.toFixed(2)} × {quantity})
           </span>
         )}
       </p>

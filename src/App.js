@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
 import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   const [products, setProducts] = useState(null);
@@ -86,6 +87,7 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
